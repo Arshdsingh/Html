@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>User</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+
+<style>
+    .moneytransfer {
+        display : none;
+    }
+    .Forgotbtn {
+                background: cyan;
+                padding: 9px;
+                border-radius: 4px;
+                text-decoration: none;
+                color: white;
+            }
+        .row {
+margin-top: 2px;
+display: flex;
+flex-direction: row;
+}
+        .rowtwo {
+            display: flex;
+            flex-direction: row;
+        }
+</style>
+
+</head>
+<body class="container">
+    <div class="rowtwo">
+            <h4>Welcome : <h4 id="welcome_name"></h4></h4>
+    </div>
+    
+    <h2 id="wUser">Transfer Funds</h2>
+    <!-- Savings Balance :<label id="savingMoney"></label> <br/> -->
+    Checking Balance :<label id="creditMoney"></label> <br/>
+    From :  <br/>
+    <select id="fromselect" class="form-control" >
+      <!--  <option value="saving">Saving</option> -->
+      <option></option>
+        <option value="checking">Checking</option>
+    </select>
+    <br/>
+    To : <br/>
+    <select id="toselect" class="form-control" onchange="onOptionChange()"  >
+           <!-- <option  value="checking">Checking</option>
+            <option  value="saving">Saving</option> -->
+            <option></option>
+            <option value="other">Other</option>
+    </select>
+    <br/>
+    <label id="labelmessage" class = "accountLabel">Account Number :</label><input  id="otheraccount" type="number" class="form-control other" >
+    Current Balance : <br/>
+    <!--<label class="form-control" id="labelbalance" for=""> </label>-->
+   <input  id="currentBalance" type="number" class="form-control" readonly >
+    <br/>
+    Credit : <br/>
+    <div class = row>
+    Total:
+    <input  id="totalCredit" type="number" class="form-control" readonly>
+    <br/>
+    Available:    <input  id="availableCredit" type="number" class="form-control" readonly >
+</div>
+    Amount : <br/>
+    <input  id="amount" type="number" class="form-control" >
+    <br/>
+    Final Balance : <br/>
+    <input  id="finalBalance" type="number" class="form-control">
+    <br/>
+    <input id="calculate" type="submit" value="Submit" class="btn-success">
+    <input id="generateVoidCheck" type="submit" value="Void Check" class="btn-success" onclick="generatePdf()">
+    <input id="Logout" type="submit" value="Logout" class="btn-success" onclick="onLogout()"> 
+    <a class="Forgotbtn" href="forgot.html">Forgot Password</a>
+   
+    <span id="moneyTransferMessage" class="text-danger moneytransfer">Money Transfered to ********</span>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Out</th>
+                <th>In</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableAccounts">
+
+            
+        </tbody>
+    </table>
+
+    <script src="js/user.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/pdf.js"></script>
+
+</body>
+</html>

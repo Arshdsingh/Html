@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Admin</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+        
+        <style>
+        .mainDiv{
+            background: lightblue;
+            padding: 5px;
+            width: 30%;
+            border: black;
+            border-radius: 25px;
+            border-style :dotted;
+        }
+        </style>
+
+    </head>
+<body>
+    <div class="mainDiv">
+    <h2>Admin Console</h2>
+    <!--Source-->
+    <h3>Source : <span id="selectedUser" class="badge badge-secondary"></span></h3>
+    <h3>Initial Balance : <span id="selectedInitialBalance" class="badge badge-secondary"></span></h3>
+    <h3>Actual Balance : <span id="selectedActualBalance" class="badge badge-secondary"></span></h3>
+
+<br/>
+<br/>
+
+    <!--Target-->
+    <h3>Target : <span id="targetUser" class="badge badge-secondary"></span></h3>
+    <h3>Initial Balance : <span id="targetInitialBalance" class="badge badge-secondary"></span></h3>
+    <h3>Actual Balance : <span id="targetActualBalance" class="badge badge-secondary"></span></h3>
+    </div>
+    <script src="js/admin.js"></script>
+</body>
+</html>

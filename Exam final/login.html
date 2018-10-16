@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+        <style>
+            .signupbtn {
+                background: lightblue;
+                padding: 9px;
+                border-radius: 4px;
+                text-decoration: none;
+                color: white;
+            }
+
+           
+        </style>
+    </head>
+    <body>
+       <div class="container">
+                <h1>User Login</h1>
+               
+                    <div class="form-group">
+                        <label for="">User Name <span class="text-danger">*</span></label>
+                        <input id="userName" class="form-control" name="user_name" type="text" placeholder="user name">
+                        </div>
+                   
+                    <div class="form-group">
+                        <label for="">Password <span class="text-danger">*</span></label>
+                        <input id="password" class="form-control" name="password" type="password" placeholder="password">
+                    </div>
+                   
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Login" onclick="validateForm()">
+                        <input class="btn btn-danger" type="reset" value="Clear">
+                        <a class="signupbtn" href="signup.html">SignUp</a>
+                    </div>
+                
+        </div>
+        <script src="js/main.js"> </script>        
+    </body>
+</html>

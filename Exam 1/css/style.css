@@ -1,0 +1,24 @@
+.main_div {
+  margin-top: 25%;
+  height: 80px;
+  align : center;
+
+}
+
+.login_Button{
+  text-decoration:none;
+  border: 1px solid black;
+  padding: 2px;
+  text-decoration-color: black;
+  border-radius: 2px;
+  color: black;
+
+}
+.login_Button:hover {
+  background-color: yellow;
+  transition: 0.5s;
+}
+
+.main_form {
+  margin-top: 20dp;
+}
